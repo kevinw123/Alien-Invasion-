@@ -10,7 +10,7 @@ def run_game():
     ai_settings = Settings()
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     #Make a ship
-    ship = Ship(screen)
+    ship = Ship(ai_settings,screen)
     pygame.display.set_caption("Alien Invasion")
 
     #Set background color
@@ -19,7 +19,8 @@ def run_game():
     #Start main loop for game.
 
     while True:
-        gf.check_events()
+        gf.check_events(ship)
+        ship.update()
         gf.update_screen(ai_settings, screen, ship)
 
 run_game()

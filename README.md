@@ -1,5 +1,5 @@
 # Alien Invasion
-+Python game built with Pygame
+Python game built with Pygame
 
 Steps to use:
 - Download all files
